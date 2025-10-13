@@ -1,0 +1,33 @@
+{
+  "name": "shadcn-dialog-manager",
+  "version": "1.0.0",
+  "description": "A unified dialog management system for React with ShadCN UI",
+  "scripts": {
+    "registry:build": "shadcn build",
+    "dev": "bun run server.ts",
+    "start": "bun run server.ts"
+  },
+  "keywords": [
+    "shadcn",
+    "shadcn-ui",
+    "dialog",
+    "modal",
+    "react",
+    "typescript",
+    "ui"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/shadcn-dialog-manager.git"
+  },
+  "homepage": "https://github.com/yourusername/shadcn-dialog-manager#readme",
+  "bugs": {
+    "url": "https://github.com/yourusername/shadcn-dialog-manager/issues"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.3.0",
+    "shadcn": "^3.4.0"
+  }
+}

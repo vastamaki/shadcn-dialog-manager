@@ -1,0 +1,37 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "shadcn-dialog-manager",
+  "homepage": "https://github.com/vastamaki/shadcn-dialog-manager",
+  "items": [
+    {
+      "name": "dialog-manager",
+      "type": "registry:component",
+      "title": "Dialog Manager",
+      "description": "A unified dialog management system for React with ShadCN UI. Define dialog types once in the component, use everywhere with full type safety.",
+      "dependencies": ["react"],
+      "registryDependencies": ["dialog", "button"],
+      "files": [
+        {
+          "path": "registry/default/dialog-manager/lib/dialog-manager/types.ts",
+          "type": "registry:lib"
+        },
+        {
+          "path": "registry/default/dialog-manager/components/dialog-provider.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/default/dialog-manager/lib/dialog-manager/registry.ts",
+          "type": "registry:lib"
+        },
+        {
+          "path": "registry/default/dialog-manager/hooks/use-dialog.ts",
+          "type": "registry:hook"
+        },
+        {
+          "path": "registry/default/dialog-manager/components/example-dialog.tsx",
+          "type": "registry:component"
+        }
+      ]
+    }
+  ]
+}
