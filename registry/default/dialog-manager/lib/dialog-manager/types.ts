@@ -3,9 +3,8 @@ import type { ReactNode } from "react";
 
 export interface DialogComponentProps<TProps = unknown, TResult = unknown> {
   props: TProps;
-  resolve: (result: TResult) => void;
-  reject: (error?: Error) => void;
-  close: () => void;
+  submit: (result: TResult) => void;
+  cancel: (reason?: string) => void;
 }
 
 export type DialogComponent<TProps = unknown, TResult = unknown> = (
@@ -17,13 +16,13 @@ export interface DialogDefinition<TProps = unknown, TResult = unknown> {
   component: DialogComponent<TProps, TResult>;
 }
 
-export type ExtractDialogProps<T> = T extends DialogComponent<infer P, any>
+export type ExtractDialogProps<T> = T extends DialogComponent<infer P, infer _>
   ? P extends void
-    ? void
+    ? undefined
     : P
   : never;
 
-export type ExtractDialogResult<T> = T extends DialogComponent<any, infer R>
+export type ExtractDialogResult<T> = T extends DialogComponent<infer _, infer R>
   ? R
   : never;
 
@@ -32,10 +31,12 @@ export interface DialogInstance<TProps = unknown, TResult = unknown> {
   dialogId: string;
   component: DialogComponent<TProps, TResult>;
   props: TProps;
-  resolve: (result: TResult) => void;
-  reject: (error?: Error) => void;
+  submit: (result: TResult) => void;
+  cancel: (reason?: string) => void;
 }
 
-export type TypedDialogRegistry = Record<string, DialogDefinition<any, any>>;
+export type AnyDialogInstance = DialogInstance<unknown, unknown>;
+
+export type TypedDialogRegistry = Record<string, DialogDefinition>;
 
 export type DialogRegistryType = typeof dialogDefinitions;

@@ -26,10 +26,6 @@
         {
           "path": "registry/default/dialog-manager/hooks/use-dialog.ts",
           "type": "registry:hook"
-        },
-        {
-          "path": "registry/default/dialog-manager/components/example-dialog.tsx",
-          "type": "registry:component"
         }
       ]
     }

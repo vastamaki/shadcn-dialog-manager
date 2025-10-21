@@ -1,7 +1,7 @@
 import { serve } from "bun";
 import { join } from "path";
 
-const PORT = 3000;
+const PORT = 8000;
 
 serve({
   port: PORT,
